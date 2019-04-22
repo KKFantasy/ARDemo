@@ -10,7 +10,8 @@ import ARKit
 import SceneKit
 import UIKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+// 基本的AR效果，快照
+class WordTrackingViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
