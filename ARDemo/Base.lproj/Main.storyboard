@@ -84,20 +84,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT2-xr-yDH">
-                                <rect key="frame" x="312" y="58" width="69" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="2N3-1e-I2s"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" id="NmK-SX-3FE"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
@@ -107,18 +102,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="-615"/>
+            <point key="canvasLocation" x="-314.49275362318843" y="-615.40178571428567"/>
         </scene>
         <!--图像识别-->
         <scene sceneID="Ezb-gA-66R">
             <objects>
-                <viewController title="图像识别" id="4ar-2p-Ng2" sceneMemberID="viewController">
+                <viewController title="图像识别" id="4ar-2p-Ng2" customClass="ImageDetectionViewController" customModule="ARDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xXW-ld-fyU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Rr-YE-WnH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s5R-PU-2C5" firstAttribute="bottom" secondItem="2Rr-YE-WnH" secondAttribute="bottom" id="9Fb-l6-TH7"/>
+                            <constraint firstItem="2Rr-YE-WnH" firstAttribute="top" secondItem="s5R-PU-2C5" secondAttribute="top" id="Nqr-HY-6SN"/>
+                            <constraint firstItem="s5R-PU-2C5" firstAttribute="trailing" secondItem="2Rr-YE-WnH" secondAttribute="trailing" id="u43-U5-NAf"/>
+                            <constraint firstItem="2Rr-YE-WnH" firstAttribute="leading" secondItem="s5R-PU-2C5" secondAttribute="leading" id="wJF-xk-7S3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="s5R-PU-2C5"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="2Rr-YE-WnH" id="ZtY-dY-cxY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zz-TF-wEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

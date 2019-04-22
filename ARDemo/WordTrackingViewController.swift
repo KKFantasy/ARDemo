@@ -31,12 +31,13 @@ class WordTrackingViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene = scene
         
         // 添加点击事件
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapScreen))
-        view.addGestureRecognizer(tap)
+        let clearItem = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(clear(_:)))
+        let captureItem = UIBarButtonItem(title: "Capture", style: .plain, target: self, action: #selector(capture))
+        navigationItem.rightBarButtonItems = [clearItem, captureItem]
     }
     
     // 点击屏幕
-    @objc func tapScreen() {
+    @objc func capture() {
         // 截图并创建平面
         let imagePlane = SCNPlane(width: sceneView.bounds.width / 6000, height: sceneView.bounds.height / 6000)
         imagePlane.firstMaterial?.diffuse.contents = sceneView.snapshot()
@@ -82,7 +83,7 @@ class WordTrackingViewController: UIViewController, ARSCNViewDelegate {
         translation.columns.3.z = -0.15 //60cm in front of the camera
     }
     
-    @IBAction func Clear(_ sender: UIButton) {
+    @objc func clear(_ sender: UIBarButtonItem) {
         sceneView.scene.rootNode.enumerateChildNodes({ node, _ in
             node.removeFromParentNode()
         })
