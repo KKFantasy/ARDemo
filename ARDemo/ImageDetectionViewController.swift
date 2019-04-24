@@ -39,7 +39,7 @@ class ImageDetectionViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionImages = referenceImages
         
-        sceneView.session.run(configuration)
+        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,6 +61,8 @@ class ImageDetectionViewController: UIViewController, ARSCNViewDelegate {
         
         let planeNode = SCNNode(geometry: plane)
         planeNode.eulerAngles.x = -.pi / 2
+        planeNode.opacity = 0.25
+        planeNode.runAction(.fadeIn(duration: 0.25))
         
         // 3. 将plane添加到检测到的图像锚点处
         node.addChildNode(planeNode)

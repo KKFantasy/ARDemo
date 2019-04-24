@@ -14,12 +14,12 @@
         <scene sceneID="WEQ-GE-OZR">
             <objects>
                 <tableViewController id="SRT-gA-avv" customClass="TableViewController" customModule="ARDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KBN-GV-TuR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KBN-GV-TuR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoListCell" textLabel="h8W-En-MHB" detailTextLabel="571-2x-7aU" rowHeight="50" style="IBUITableViewCellStyleValue1" id="Dop-KC-jaQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoListCell" textLabel="h8W-En-MHB" detailTextLabel="571-2x-7aU" style="IBUITableViewCellStyleValue1" id="Dop-KC-jaQ">
                                 <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dop-KC-jaQ" id="vgp-tN-FAM">
@@ -53,6 +53,7 @@
                     <connections>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="demo1" id="PcK-mK-zXb"/>
                         <segue destination="4ar-2p-Ng2" kind="show" identifier="demo2" id="3YZ-dB-X6f"/>
+                        <segue destination="80r-4e-SbI" kind="show" identifier="demo3" id="nOE-5W-VYM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dk-HJ-kKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -75,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="-2364" y="-29"/>
         </scene>
-        <!--快照-->
+        <!--Demo1-快照-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController title="快照" id="BV1-FR-VrT" customClass="WordTrackingViewController" customModule="ARDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Demo1-快照" id="BV1-FR-VrT" customClass="WordTrackingViewController" customModule="ARDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -104,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="-314.49275362318843" y="-615.40178571428567"/>
         </scene>
-        <!--图像识别-->
+        <!--Demo2-图像识别-->
         <scene sceneID="Ezb-gA-66R">
             <objects>
-                <viewController title="图像识别" id="4ar-2p-Ng2" customClass="ImageDetectionViewController" customModule="ARDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Demo2-图像识别" id="4ar-2p-Ng2" customClass="ImageDetectionViewController" customModule="ARDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xXW-ld-fyU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +132,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zz-TF-wEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="78"/>
+            <point key="canvasLocation" x="448" y="-413"/>
+        </scene>
+        <!--Demo3-对象识别-->
+        <scene sceneID="8Qn-UI-Oii">
+            <objects>
+                <viewController title="Demo3-对象识别" id="80r-4e-SbI" customClass="ObjectDetectionViewController" customModule="ARDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ei2-Nh-65a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjf-Q1-JN0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WcY-Wy-OEt" firstAttribute="bottom" secondItem="cjf-Q1-JN0" secondAttribute="bottom" id="3Eq-8S-KMl"/>
+                            <constraint firstItem="cjf-Q1-JN0" firstAttribute="top" secondItem="WcY-Wy-OEt" secondAttribute="top" id="ANL-oE-LTa"/>
+                            <constraint firstItem="WcY-Wy-OEt" firstAttribute="trailing" secondItem="cjf-Q1-JN0" secondAttribute="trailing" id="edU-5i-5HH"/>
+                            <constraint firstItem="cjf-Q1-JN0" firstAttribute="leading" secondItem="WcY-Wy-OEt" secondAttribute="leading" id="zf0-em-s1v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WcY-Wy-OEt"/>
+                    </view>
+                    <connections>
+                        <outlet property="SCNView" destination="cjf-Q1-JN0" id="T8h-sZ-33i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mT2-AV-apS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="89"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9552A5ED227043EB004DF713 /* ObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552A5EC227043EB004DF713 /* ObjectDetectionViewController.swift */; };
 		95B7B3282269A2160088EA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7B3272269A2160088EA22 /* AppDelegate.swift */; };
 		95B7B32A2269A2160088EA22 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B7B3292269A2160088EA22 /* art.scnassets */; };
 		95B7B32C2269A2160088EA22 /* WordTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7B32B2269A2160088EA22 /* WordTrackingViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9552A5EC227043EB004DF713 /* ObjectDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewController.swift; sourceTree = "<group>"; };
 		95B7B3242269A2160088EA22 /* ARDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B7B3272269A2160088EA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B7B3292269A2160088EA22 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				95B7B393226D90FE0088EA22 /* TableViewController.swift */,
 				95B7B32B2269A2160088EA22 /* WordTrackingViewController.swift */,
 				95B7B397226DA34C0088EA22 /* ImageDetectionViewController.swift */,
+				9552A5EC227043EB004DF713 /* ObjectDetectionViewController.swift */,
 				95B7B32D2269A2160088EA22 /* Main.storyboard */,
 				95B7B3302269A2160088EA22 /* Assets.xcassets */,
 				95B7B3322269A2160088EA22 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 				95B7B32C2269A2160088EA22 /* WordTrackingViewController.swift in Sources */,
 				95B7B394226D90FE0088EA22 /* TableViewController.swift in Sources */,
 				95B7B398226DA34C0088EA22 /* ImageDetectionViewController.swift in Sources */,
+				9552A5ED227043EB004DF713 /* ObjectDetectionViewController.swift in Sources */,
 				95B7B3282269A2160088EA22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
