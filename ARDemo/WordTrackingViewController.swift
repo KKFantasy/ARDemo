@@ -15,6 +15,8 @@ class WordTrackingViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
+    var snapshots = [SCNNode]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +48,8 @@ class WordTrackingViewController: UIViewController, ARSCNViewDelegate {
         // 创建plane node并添加到场景
         let planeNode = SCNNode(geometry: imagePlane)
         sceneView.scene.rootNode.addChildNode(planeNode)
+        
+        snapshots.append(planeNode)
         
         // 改变其在空间的位置为摄像头的位置
         let currentFrame = sceneView.session.currentFrame
@@ -84,9 +88,11 @@ class WordTrackingViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @objc func clear(_ sender: UIBarButtonItem) {
-        sceneView.scene.rootNode.enumerateChildNodes({ node, _ in
-            node.removeFromParentNode()
-        })
+//        sceneView.scene.rootNode.enumerateChildNodes({ node, _ in
+//            node.removeFromParentNode()
+//        })
+        snapshots.forEach({$0.removeFromParentNode()})
+        snapshots.removeAll()
     }
     
     override func viewWillAppear(_ animated: Bool) {
