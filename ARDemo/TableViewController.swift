@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    let detailTitles = ["快照", "图像识别", "对象识别"]
+    let detailTitles = ["快照", "图像识别", "对象识别", "人脸识别"]
     
     var index = 0
     

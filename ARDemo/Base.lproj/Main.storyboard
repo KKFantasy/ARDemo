@@ -54,6 +54,7 @@
                         <segue destination="BV1-FR-VrT" kind="show" identifier="demo1" id="PcK-mK-zXb"/>
                         <segue destination="4ar-2p-Ng2" kind="show" identifier="demo2" id="3YZ-dB-X6f"/>
                         <segue destination="80r-4e-SbI" kind="show" identifier="demo3" id="nOE-5W-VYM"/>
+                        <segue destination="zQf-KT-wap" kind="show" identifier="demo4" id="Knv-Or-NRc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dk-HJ-kKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,6 +163,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mT2-AV-apS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-314" y="89"/>
+        </scene>
+        <!--Demo4-人脸识别-->
+        <scene sceneID="FKh-EM-q1D">
+            <objects>
+                <viewController title="Demo4-人脸识别" id="zQf-KT-wap" customClass="FaceViewController" customModule="ARDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1yK-6k-2gy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0di-3d-FNw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbN-Eo-cek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="327"/>
         </scene>
     </scenes>
 </document>

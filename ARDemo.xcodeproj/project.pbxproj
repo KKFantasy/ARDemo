@@ -18,6 +18,7 @@
 		95B7B34A2269A2170088EA22 /* ARDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7B3492269A2170088EA22 /* ARDemoUITests.swift */; };
 		95B7B394226D90FE0088EA22 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7B393226D90FE0088EA22 /* TableViewController.swift */; };
 		95B7B398226DA34C0088EA22 /* ImageDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7B397226DA34C0088EA22 /* ImageDetectionViewController.swift */; };
+		95BF4B792276C27000100125 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF4B782276C27000100125 /* FaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		95B7B34B2269A2170088EA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B7B393226D90FE0088EA22 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		95B7B397226DA34C0088EA22 /* ImageDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetectionViewController.swift; sourceTree = "<group>"; };
+		95BF4B782276C27000100125 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				95B7B32B2269A2160088EA22 /* WordTrackingViewController.swift */,
 				95B7B397226DA34C0088EA22 /* ImageDetectionViewController.swift */,
 				9552A5EC227043EB004DF713 /* ObjectDetectionViewController.swift */,
+				95BF4B782276C27000100125 /* FaceViewController.swift */,
 				95B7B32D2269A2160088EA22 /* Main.storyboard */,
 				95B7B3302269A2160088EA22 /* Assets.xcassets */,
 				95B7B3322269A2160088EA22 /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 				95B7B32C2269A2160088EA22 /* WordTrackingViewController.swift in Sources */,
 				95B7B394226D90FE0088EA22 /* TableViewController.swift in Sources */,
 				95B7B398226DA34C0088EA22 /* ImageDetectionViewController.swift in Sources */,
+				95BF4B792276C27000100125 /* FaceViewController.swift in Sources */,
 				9552A5ED227043EB004DF713 /* ObjectDetectionViewController.swift in Sources */,
 				95B7B3282269A2160088EA22 /* AppDelegate.swift in Sources */,
 			);
