@@ -142,7 +142,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjf-Q1-JN0">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjf-Q1-JN0" userLabel="sceneView">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </arscnView>
                         </subviews>
@@ -156,7 +156,7 @@
                         <viewLayoutGuide key="safeArea" id="WcY-Wy-OEt"/>
                     </view>
                     <connections>
-                        <outlet property="SCNView" destination="cjf-Q1-JN0" id="T8h-sZ-33i"/>
+                        <outlet property="sceneView" destination="cjf-Q1-JN0" id="asQ-ft-Nkw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mT2-AV-apS" userLabel="First Responder" sceneMemberID="firstResponder"/>

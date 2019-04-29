@@ -33,8 +33,8 @@ class ImageDetectionViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
-            fatalError("AR Resources 资源文件不存在 。")
+        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "Image Detection", bundle: nil) else {
+            fatalError("Image Detection 资源文件不存在 。")
         }
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionImages = referenceImages

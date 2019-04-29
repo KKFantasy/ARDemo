@@ -17,18 +17,37 @@ class ObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        sceneView.showsStatistics = true
+        
+        sceneView.delegate = self
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let configuration = ARWorldTrackingConfiguration()
+        guard let referenceObjects = ARReferenceObject.referenceObjects(inGroupNamed: "Object Detection", bundle: nil) else {
+            fatalError("Object Detection 资源文件不存在")
+        }
+        
+        configuration.detectionObjects = referenceObjects
+        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
-    */
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let objectAnchor = anchor as? ARObjectAnchor else { return }
+        
+        let referenceObject = objectAnchor.referenceObject
+        let box = SCNBox(width: CGFloat(referenceObject.extent.z), height: CGFloat(referenceObject.extent.y), length: CGFloat(referenceObject.extent.x), chamferRadius: 0)
+        
+        let boxNode = SCNNode(geometry: box)
+        boxNode.simdPosition = referenceObject.center
+        boxNode.opacity = 0.25
+        boxNode.runAction(.fadeIn(duration: 0.25))
+        
+        node.addChildNode(boxNode)
+        
+    }
 
 }
