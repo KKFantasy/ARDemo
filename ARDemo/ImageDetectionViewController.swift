@@ -12,10 +12,13 @@ import ARKit
 
 class ImageDetectionViewController: UIViewController, ARSCNViewDelegate {
 
-    @IBOutlet var sceneView: ARSCNView!
+    var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sceneView = ARSCNView(frame: view.bounds)
+        view.addSubview(sceneView)
         
         // Set the view's delegate
         sceneView.delegate = self

@@ -13,12 +13,15 @@ import UIKit
 // 基本的AR效果，快照
 class WordTrackingViewController: UIViewController, ARSCNViewDelegate {
     
-    @IBOutlet var sceneView: ARSCNView!
+    var sceneView: ARSCNView!
     
     var snapshots = [SCNNode]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sceneView = ARSCNView(frame: view.bounds)
+        view.addSubview(sceneView)
         
         // Set the view's delegate
         sceneView.delegate = self
