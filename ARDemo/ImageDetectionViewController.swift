@@ -59,16 +59,30 @@ class ImageDetectionViewController: UIViewController, ARSCNViewDelegate {
         
         // 2. 在检测到的物体图像处添加 plane
         let referenceImage = imageAnchor.referenceImage
-        let plane = SCNPlane(width: referenceImage.physicalSize.width / 2,
-                             height: referenceImage.physicalSize.height / 2)
+        let plane = SCNPlane(width: referenceImage.physicalSize.width,
+                             height: referenceImage.physicalSize.height)
+        
         
         let planeNode = SCNNode(geometry: plane)
         planeNode.eulerAngles.x = -.pi / 2
-        planeNode.opacity = 0.25
-        planeNode.runAction(.fadeIn(duration: 0.25))
+        planeNode.opacity = 0
+        planeNode.runAction(.fadeOpacity(to: 0.25, duration: 0.25))
+        planeNode.name = "test"
         
         // 3. 将plane添加到检测到的图像锚点处
         node.addChildNode(planeNode)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touchLoaction = touches.first?.location(in: sceneView),
+            let hitNode = sceneView.hitTest(touchLoaction, options: nil).first?.node,
+            let nodeName = hitNode.name
+        else { return }
+        
+        print(nodeName)
+        if nodeName == "test" {
+            performSegue(withIdentifier: "success", sender: self)
+        }
     }
     
 
